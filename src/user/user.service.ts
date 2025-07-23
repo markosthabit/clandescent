@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 export class UserService {
   //TODO
   async create(createUserDto: CreateUserDto) {
-    await prisma.user.create({});
+    await prisma.user.create({ data: { ...createUserDto } });
     return 'This action adds a new user';
   }
 
@@ -24,7 +24,15 @@ export class UserService {
   }
 
   //TODO
-  update(id: number, updateUserDto: UpdateUserDto) {
+  async update(id: number, updateUserDto: UpdateUserDto) {
+    await prisma.user.update({
+      where: {
+        id: `${id}`,
+      },
+      data: {
+        ...updateUserDto,
+      },
+    });
     return `This action updates a #${id} user`;
   }
 
