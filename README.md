@@ -171,7 +171,7 @@ Want to contribute? You're welcome to fork the repo and open a PR.
 
 ## 📜 License
 
-GNU GPLv3 License — see [`LICENSE`](./LICENSE) for full terms.
+GNU GPLv3 License — see [`LICENSE`](./LICENSE.md) for full terms.
 
 ---
 
