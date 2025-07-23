@@ -19,7 +19,7 @@ model User {
   email    String      @unique
   password String
   role     Role        @default(USER)
-  vault    VaultItem[]
+  vault    VaultItem[] // relation field; it does not exist in the database!
 }
 
 model VaultItem {
@@ -27,8 +27,8 @@ model VaultItem {
   title   String
   type    VaultType // PASSWORD/API_KEY/NOTE
   content String // Encrypted data
-  owner   User      @relation(fields: [userId], references: [id])
-  userId  String    @db.ObjectId
+  owner   User      @relation(fields: [userId], references: [id]) // relation field; it does not exist in the database!
+  userId  String    @db.ObjectId // relation scalar field  (used in the `@relation` attribute above, exists in the db)
 }
 
 enum Role {
