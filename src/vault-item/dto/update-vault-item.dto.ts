@@ -1,4 +1,6 @@
-import { PartialType } from '@nestjs/mapped-types';
+import { OmitType, PartialType } from '@nestjs/mapped-types';
 import { CreateVaultItemDto } from './create-vault-item.dto';
 
-export class UpdateVaultItemDto extends PartialType(CreateVaultItemDto) {}
+export class UpdateVaultItemDto extends PartialType(
+  OmitType(CreateVaultItemDto, ['userId']),
+) {}
