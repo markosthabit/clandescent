@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 export class VaultItemService {
   //TODO
   async create(createVaultItemDto: CreateVaultItemDto) {
-    await prisma.vaultItem.create({});
+    await prisma.vaultItem.create({ data: { ...createVaultItemDto } });
     return 'This action adds a new vaultItem';
   }
 
