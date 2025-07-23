@@ -17,14 +17,14 @@ export class UserService {
     return await prisma.user.findMany();
   }
 
-  async findOne(id: number) {
+  async findOne(id: string) {
     const user = await prisma.user.findFirst({ where: { id: `${id}` } });
     if (!user) throw new NotFoundException('User Not Found');
     return user;
   }
 
   //TODO
-  async update(id: number, updateUserDto: UpdateUserDto) {
+  async update(id: string, updateUserDto: UpdateUserDto) {
     await prisma.user.update({
       where: {
         id: `${id}`,
@@ -36,7 +36,7 @@ export class UserService {
     return `This action updates a #${id} user`;
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     await prisma.user.delete({ where: { id: `${id}` } });
     return { message: 'deleted successfully' };
   }
