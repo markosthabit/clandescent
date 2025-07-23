@@ -17,7 +17,7 @@ export class VaultItemService {
     return await prisma.vaultItem.findMany();
   }
 
-  async findOne(id: number) {
+  async findOne(id: string) {
     const vaultItem = await prisma.vaultItem.findFirst({
       where: { id: `${id}` },
     });
@@ -25,13 +25,22 @@ export class VaultItemService {
     return vaultItem;
   }
 
-  //TODO
-  update(id: number, updateVaultItemDto: UpdateVaultItemDto) {
+  async update(
+    id: string,
+    userId: string,
+    updateVaultItemDto: UpdateVaultItemDto,
+  ) {
+    await prisma.vaultItem.update({
+      where: { id: `${id}`, userId: `${userId}` },
+      data: updateVaultItemDto,
+    });
     return `This action updates a #${id} vaultItem`;
   }
 
-  async remove(id: number) {
-    await prisma.vaultItem.delete({ where: { id: `${id}` } });
+  async remove(id: string, userId: string) {
+    await prisma.vaultItem.delete({
+      where: { id: `${id}`, userId: `${userId}` },
+    });
     return { message: 'deleted successfully' };
   }
 }

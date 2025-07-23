@@ -27,16 +27,24 @@ export class VaultItemController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.vaultItemService.findOne(+id);
+    return this.vaultItemService.findOne(id);
   }
 
+  //TODO: Retrieve the user id from auth TOKEN
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateVaultItemDto: UpdateVaultItemDto) {
-    return this.vaultItemService.update(+id, updateVaultItemDto);
+  update(
+    @Param('id') id: string,
+    @Body() updateVaultItemDto: UpdateVaultItemDto,
+  ) {
+    return this.vaultItemService.update(
+      id,
+      `68807f85dd2dce31cd064424`,
+      updateVaultItemDto,
+    );
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.vaultItemService.remove(+id);
+    return this.vaultItemService.remove(id, `68807f85dd2dce31cd064424`);
   }
 }
