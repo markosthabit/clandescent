@@ -5,15 +5,10 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">🛡️ CLANDESCENT — A Secure Vault for Sensitive Information</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
   <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
     <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
   <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
@@ -21,78 +16,203 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+CLANDESCENT is a secure vault system for managing passwords, API keys, and sensitive notes. Built with a zero-knowledge architecture and client-side AES-256 encryption, it ensures that even the system administrators can’t access your secrets.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+> **Tech Stack**: NestJS • Angular • MongoDB • Prisma • Web Crypto API
+> **Core Values**: Privacy by design • Role-based access • Auditability • Simplicity
 
-## Project setup
+---
+  >[!WARNING]  **Security Disclaimer**
+  > CLANDESCENT is under active development and **not yet suitable for production use**.
+  > While it follows modern security principles, it has **not been audited**, and data protection cannot be guaranteed.
+  > Use at your own risk during this early stage.
 
-```bash
-$ npm install
+---
+
+## 🔐 Key Features
+
+* 🔒 **Client-side AES-256 Encryption** – Secrets are encrypted before leaving your device.
+* 👁️ **Zero-Knowledge Architecture** – Plaintext data is never stored or transmitted.
+* 🛡️ **Role-Based Access Control** – Fine-grained permission management.
+* 📜 **Comprehensive Audit Logging** – Every sensitive action is recorded.
+* ⚙️ **Modular Design** – Clean architecture powered by NestJS and Angular.
+
+---
+
+
+## 🧪 Tasks
+
+### 📦 Backend 
+- [x] Schema: User + VaultItem
+- [x] DTOs: With validation decorators
+- [x] CRUD: Users and vault items
+- [ ] Auth Email/Password Model
+- [ ] JWT authentication 
+- [ ] Vault ownership guards and soft delete
+- [ ] Standardized HTTP responses
+- [ ] AES-256 encryption service (Web Crypto API)
+- [ ] Audit logging (Prisma + Decorators)
+
+
+### 🎨 Frontend 
+
+- [ ] Angular authentication service
+- [ ] PrimeNG vault UI
+- [ ] Encryption status indicators
+- [ ] Admin dashboard layout
+
+---
+
+## 📸 UI Preview (Coming Soon)
+
+---
+
+## 🗺️ Roadmap
+
+### Phase 1: Security Foundations
+
+```mermaid
+graph TD
+    A[2FA Integration] --> B[Biometric Support]
+    C[Key Rotation] --> D[Hardware Key Support]
+    E[Pen Testing] --> F[SOC2 Checklist]
 ```
 
-## Compile and run the project
+### Phase 2: Enterprise Support
 
-```bash
-# development
-$ npm run start
+* Team sharing with granular access
+* SCIM support
+* Real-time breach monitoring
 
-# watch mode
-$ npm run start:dev
+### Phase 3: Mobile Ecosystem
 
-# production mode
-$ npm run start:prod
+* iOS/Android clients
+* WatchOS unlock
+* Secure QR code scanner
+* Offline mode
+
+---
+
+## 🧰 Tech Stack
+
+### Backend (NestJS)
+
+```json
+{
+  "framework": "NestJS v11",
+  "database": "MongoDB v8 + Prisma v6",
+  "security": ["AES-256-CTR", "bcrypt", "PBKDF2"],
+  "testing": ["Jest", "Supertest", "Testcontainers"]
+}
 ```
 
-## Run tests
+### Frontend (Angular)
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+```json
+{
+  "framework": "Angular v20",
+  "ui": "PrimeNG v19",
+  "state": "NgRx v19",
+  "security": ["Web Crypto API", "OAuth2"]
+}
 ```
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## ⚙️ Getting Started
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 📦 Prerequisites
+
+* Node.js v18+
+* Angular CLI
+* MongoDB Atlas account (or local MongoDB)
+
+### 🛠️ Installation
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+# Clone repository
+git clone https://github.com/markosthabit/clandescent.git
+
+# Backend
+cd clandescent-api
+npm install
+npx prisma generate
+
+# Frontend
+cd ../clandescent-web
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 🔐 Configuration
 
-## Resources
+Create a `.env` file in `/clandescent-api`:
 
-Check out a few resources that may come in handy when working with NestJS:
+```env
+DATABASE_URL="mongodb+srv://user:pass@cluster.mongodb.net/clandescent"
+JWT_SECRET="your-strong-secret"
+ENCRYPTION_DERIVATION_ROUNDS=100000
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### ▶️ Run the App
 
-## Support
+```bash
+# Start backend
+npm run start:dev
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+# Start frontend
+ng serve
+```
 
-## Stay in touch
+Visit: `http://localhost:4200`
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 📡 API Endpoints
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+| Endpoint         | Method | Description             | Status |
+| ---------------- | ------ | ----------------------- | ------ |
+| `/auth/register` | POST   | User registration       | ✅      |
+| `/auth/login`    | POST   | JWT login               | ⬜️     |
+| `/vault`         | GET    | List user's vault items | ✅      |
+| `/vault`         | POST   | Create new vault item   | ✅      |
+| `/vault/:id`     | PATCH  | Update vault item       | ⬜️     |
+| `/vault/:id`     | DELETE | Soft-delete vault item  | ⬜️     |
+| `/admin/users`   | GET    | Admin-only user list    | ⬜️     |
+
+---
+
+## 🧭 Architecture Overview
+
+```mermaid
+graph TD
+    A[Angular UI] --> B[NestJS API]
+    B --> C[Auth Service]
+    B --> D[Encryption Service]
+    B --> E[Vault Service]
+    C --> F[Prisma ORM]
+    D --> G[Crypto Module]
+    E --> H[Audit Logger]
+    F --> I[(MongoDB)]
+    H --> J[(Audit DB)]
+```
+
+---
+
+## 🤝 Contributing
+
+Want to contribute? You're welcome to fork the repo and open a PR.
+
+> For now, we’re prioritizing focused development.
+> A full contribution guide will be added once the architecture stabilizes.
+
+---
+
+## 📜 License
+
+MIT License — see [`LICENSE`](./LICENSE) for full terms.
+
+---
+
+> **CLANDESCENT** — Because your secrets deserve better than sticky notes.
+
+---
