@@ -13,10 +13,11 @@ CLANDESCENT is a secure vault system for managing passwords, API keys, and sensi
 > **Core Values**: Privacy by design • Role-based access • Auditability • Simplicity
 
 ---
-  >[!WARNING]  **Security Disclaimer**
-  > CLANDESCENT is under active development and **not yet suitable for production use**.
-  > While it follows modern security principles, it has **not been audited**, and data protection cannot be guaranteed.
-  > Use at your own risk during this early stage.
+>[!WARNING]
+> **Security Disclaimer:**
+> CLANDESCENT is under active development and **not yet suitable for production use**.
+> While it follows modern security principles, it has **not been audited**, and data protection cannot be guaranteed.
+> Use at your own risk during this early stage.
 
 ---
 
