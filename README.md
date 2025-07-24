@@ -174,5 +174,13 @@ Want to contribute? You're welcome to fork the repo and open a PR.
 GNU GPLv3 License — see [`LICENSE`](./LICENSE.md) for full terms.
 
 ---
+## :handshake: Acknowledgments
+  This project was developed with the help of AI assistants. Contributions included:
+  - Initial project conceptualization and security architecture design.
+  - Readme, SRS documentation and technical roadmap planning.
+  - Logo Design.
 
+>While AI assistance accelerated the design process, all implementation decisions and final code were created by the author.
+
+--- 
 > **CLANDESCENT** — Because your secrets deserve better than sticky notes.
