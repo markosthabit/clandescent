@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#" target="blank"><img src="./Clandescent.png" width="240" alt="Nest Logo" style="  border-radius: 25%;"/></a>
+  <a href="#" target="blank"><img src="./Clandescent.png" width="240" alt="Clandescent Logo"/></a>
 </p>
 
   <p align="center">🛡️ CLANDESCENT — A Secure Vault for Sensitive Information</p>
