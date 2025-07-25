@@ -10,6 +10,7 @@
 CLANDESCENT is a secure vault system for managing passwords, API keys, and sensitive notes. Built with a zero-knowledge architecture and client-side AES-256 encryption, it ensures that even the system administrators can’t access your secrets.
 
 > **Tech Stack**: NestJS • Angular • MongoDB • Prisma • Web Crypto API
+>
 > **Core Values**: Privacy by design • Role-based access • Auditability • Simplicity
 
 ---
@@ -56,7 +57,6 @@ CLANDESCENT is a secure vault system for managing passwords, API keys, and sensi
 ---
 
 ## 📸 UI Preview (Coming Soon)
-
 ---
 
 ## 🗺️ Roadmap
