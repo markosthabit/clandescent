@@ -43,9 +43,9 @@ CLANDESCENT is a secure vault system for managing passwords, API keys, and sensi
   - [x] JWT authentication 
   - [ ] Route Guards & Vault ownership guards 
   - [ ] Soft delete or timed Hard delete
+  - [ ] Audit logging (Prisma + Decorators)
   - [ ] Standardized HTTP responses
   - [ ] AES-256 encryption service (Web Crypto API)
-  - [ ] Audit logging (Prisma + Decorators)
 
 
 * ### 🎨 Frontend 
