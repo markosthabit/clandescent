@@ -10,7 +10,9 @@ import {
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-
+import { Roles } from 'src/decorators/roles.decorator';
+import { Role } from 'generated/prisma';
+@Roles(Role.ADMIN)
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
